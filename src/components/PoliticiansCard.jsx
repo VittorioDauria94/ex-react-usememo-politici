@@ -1,4 +1,8 @@
-export default function PoliticiansCard({ user }) {
+import { memo } from "react";
+
+export default memo(function PoliticiansCard({ user }) {
+  console.log("render card:", user.name);
+
   const { name, image, position, biography } = user;
   return (
     <div className="card h-100">
@@ -11,4 +15,4 @@ export default function PoliticiansCard({ user }) {
       </div>
     </div>
   );
-}
+});
